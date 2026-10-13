@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cachenetworks.github.io/VerityStory/sitemap.xml
