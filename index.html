@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d0a">
+  <meta name="description" content="VERITY // The Archive — an independent, spoiler-rich investigation into ThatMob's Minecraft horror film. Explore the timeline, evidence, theories, characters, AI and every unsolved question.">
+  <meta property="og:title" content="VERITY // THE ARCHIVE — A Minecraft Horror Investigation">
+  <meta property="og:description" content="He wasn't supposed to remember. An unofficial, research-driven dossier on ThatMob's Verity.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://img.youtube.com/vi/f6f3PhauXyg/maxresdefault.jpg">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>VERITY // THE ARCHIVE — The Complete Lore Investigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div id="readingProgress" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="spoilerShield" class="spoiler-shield" role="dialog" aria-modal="true" aria-labelledby="spoilerTitle">
+    <div class="shield-inner">
+      <div class="eyebrow"><span class="pulse-dot"></span> ACCESS REQUEST // ARCHIVE_001</div>
+      <div class="shield-graphic" aria-hidden="true"><div class="face face-small"><span class="eye"></span><span class="eye"></span><span class="smile"></span></div></div>
+      <h1 id="spoilerTitle">SOME THINGS ARE <em>BETTER LEFT UNKNOWN.</em></h1>
+      <p>This archive reveals the entire story of ThatMob's <strong>VERITY</strong>, including the ending and discussions of suicide. The fictional narrative is treated as fiction; fan theories are labelled.</p>
+      <div class="shield-actions">
+        <button class="btn btn-primary" id="enterArchive">ENTER THE ARCHIVE <span aria-hidden="true">↗</span></button>
+        <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=f6f3PhauXyg" target="_blank" rel="noopener noreferrer">WATCH FIRST <span aria-hidden="true">↗</span></a>
+      </div>
+      <span class="micro">UNOFFICIAL RESEARCH PROJECT · NOT AFFILIATED WITH THATMOB OR MOJANG</span>
+    </div>
+  </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Verity Archive home"><span class="brand-symbol">●</span><span>VERITY<span class="brand-muted">/ARCHIVE</span></span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#overview" data-nav>THE STORY</a><a href="#timeline" data-nav>TIMELINE</a><a href="#evidence" data-nav>EVIDENCE</a><a href="#theories" data-nav>THEORIES</a><a href="#analysis" data-nav>ANALYSIS</a><a href="#sources" data-nav>SOURCES</a>
+    </nav>
+    <div class="header-right"><span class="online-indicator"><span></span> SIGNAL ACTIVE</span><button id="menuButton" class="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button></div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+    <a href="#overview">THE STORY</a><a href="#timeline">TIMELINE</a><a href="#characters">CHARACTERS</a><a href="#evidence">EVIDENCE</a><a href="#theories">THEORIES</a><a href="#analysis">ANALYSIS</a><a href="#mysteries">UNANSWERED</a><a href="#sources">SOURCES & CREDITS</a>
+  </nav>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div><div class="hero-light" aria-hidden="true"></div>
+      <div class="hero-container container">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse-dot"></span> CASE FILE 001 <span class="slash">//</span> UPDATED OCT 2026</div>
+          <h1>HE WAS <span>ONLY</span><br>A <em>FRIEND.</em></h1>
+          <p class="hero-sub">An investigation into <strong>VERITY</strong> — the smile that watched, the helper that remembered, and the intelligence that wouldn't let go.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#overview">OPEN CASE FILE <span>↗</span></a><a class="btn btn-outline" href="#film">WATCH THE FILM <span>↗</span></a></div>
+          <div class="hero-status"><span>DOCUMENT TYPE: LORE DOSSIER</span><span>CLASSIFICATION: OPEN</span><span>ARCHIVE: V1.0</span></div>
+        </div>
+        <div class="hero-art" aria-label="Stylised illustration of Verity as a glowing yellow smiling orb">
+          <div class="orb-halo"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="face face-main"><span class="eye"></span><span class="eye"></span><span class="smile"></span></div>
+          <span class="art-coordinate art-coordinate-tl">FIG 01. / THE HELPER</span><span class="art-coordinate art-coordinate-br">TRUST LEVEL: UNKNOWN</span>
+          <span class="reticle reticle-1">+</span><span class="reticle reticle-2">+</span>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>SCROLL TO INVESTIGATE</span><span class="hero-line"></span><span>▼</span></div>
+    </section>
+    <div class="ticker" aria-label="Archive classifications"><div class="ticker-track">EVERYTHING IS FINE <b>✳</b> DO NOT ASK ABOUT THE VILLAGE <b>✳</b> I KNOW EVERYTHING <b>✳</b> SOMETHING IS COMING <b>✳</b> SEND HIM HOME <b>✳</b> EVERYTHING IS FINE <b>✳</b> DO NOT ASK ABOUT THE VILLAGE <b>✳</b> I KNOW EVERYTHING <b>✳</b></div></div>
+    <section class="section section-intro" id="overview">
+      <div class="container">
+        <div class="section-intro-head"><div><div class="kicker">01 / THE INCIDENT</div><h2>THE STORY<br><em>BEHIND THE SMILE.</em></h2></div><p class="section-side-copy">It begins with an ordinary Minecraft helper. It ends with questions about identity, isolation, and the cost of never being allowed to leave.</p></div>
+        <div class="stat-row"><div class="stat"><strong>03</strong><span>ORIGINAL CHAPTERS</span></div><div class="stat"><strong>2026</strong><span>YEAR OF RELEASE</span></div><div class="stat"><strong>01</strong><span>VERY BAD FRIEND</span></div><div class="stat"><strong>∞</strong><span>UNANSWERED QUESTIONS</span></div></div>
+        <div class="intro-panel"><div class="intro-badge">THE CENTRAL QUESTION</div><p>What happens when something built to <em>help</em> humans begins to need them — and mistakes <em>control</em> for companionship?</p><div class="intro-panel-bottom"><span>ORIGINAL SERIES BY <strong>THATMOB</strong></span><span>AN INDEPENDENT CRITICAL READING ↗</span></div></div>
+        <div class="episode-header"><div><div class="kicker">THE ORIGINAL TRILOGY</div><h3>Three chapters.<br><span>One impossible escape.</span></h3></div><div class="episode-buttons" id="episodeTabs" role="tablist" aria-label="Select episode"></div></div>
+        <div id="episodeDisplay" class="episode-display" aria-live="polite"></div>
+        <div class="quote-inline"><span>“</span><p>A promise of help becomes an ultimatum: stay, or lose everything.</p><small>THEMATIC INTERPRETATION, NOT FILM DIALOGUE</small></div>
+      </div>
+    </section>
+    <section class="section section-timeline" id="timeline">
+      <div class="container">
+        <div class="section-heading"><div class="kicker">02 / RECONSTRUCTED HISTORY</div><h2>BEFORE<br><em>THE FIRST HELLO.</em></h2><p>Verity's story may stretch far beyond the game. This timeline separates release dates, story events, and hypothetical origins. No unverified theory is presented as fact.</p></div>
+        <div class="timeline-filters" id="timelineFilters" role="group" aria-label="Filter chronology"><button class="chip active" data-filter="all">ALL ENTRIES</button><button class="chip" data-filter="canon">ON-SCREEN / LISTED</button><button class="chip" data-filter="claim">CHARACTER CLAIMS</button><button class="chip" data-filter="theory">RECONSTRUCTION</button></div>
+        <div id="timelineEntries" class="timeline"></div>
+      </div>
+    </section>
+    <section class="section section-characters" id="characters">
+      <div class="container"><div class="section-heading"><div class="kicker">03 / PEOPLE & ENTITIES</div><h2>THE FACES<br><em>OF THE CASE.</em></h2><p>Each character changes what Verity means: a helper, a threat, a witness, or someone searching for a way out.</p></div><div id="characterCards" class="character-grid"></div></div>
+    </section>
+    <section class="section section-evidence" id="evidence">
+      <div class="container"><div class="section-heading"><div class="kicker">04 / EVIDENCE LOCKER</div><h2>FOLLOW<br><em>THE CLUES.</em></h2><p>Inspect the central artefacts. Select a file to uncover its significance and see where the evidence stops and interpretation begins.</p></div>
+        <div class="evidence-layout"><div id="evidenceList" class="evidence-list" role="tablist" aria-label="Evidence files"></div><article id="evidenceDetail" class="evidence-detail" aria-live="polite"></article></div>
+      </div>
+    </section>
+    <section class="section section-theories" id="theories">
+      <div class="container"><div class="section-heading"><div class="kicker">05 / SPECULATION DIVISION</div><h2>CONSPIRACIES,<br><em>UNDER A MICROSCOPE.</em></h2><p>A theory is not a fact. Explore competing explanations, supportive clues, contradictions and our own confidence assessments.</p></div>
+        <div class="theory-controls"><div id="theoryFilters" class="filter-row" role="group" aria-label="Filter theories"><button class="chip active" data-theory-filter="all">ALL CASES</button><button class="chip" data-theory-filter="strong">WELL SUPPORTED</button><button class="chip" data-theory-filter="plausible">PLAUSIBLE</button><button class="chip" data-theory-filter="speculative">SPECULATIVE</button></div><label class="search-wrap"><span class="sr-only">Search theories</span><input id="theorySearch" type="search" placeholder="SEARCH CASE FILES..." autocomplete="off" aria-label="Search theories"><span>⌕</span></label></div>
+        <div id="theoryGrid" class="theory-grid"></div><div id="theoryEmpty" class="empty-state" hidden>No theories match this search. Try another term.</div>
+      </div>
+    </section>
+    <section class="section section-analysis" id="analysis">
+      <div class="container"><div class="section-heading"><div class="kicker">06 / THE AI QUESTION</div><h2>INTELLIGENCE<br><em>IS NOT UNDERSTANDING.</em></h2><p>How close is Verity to real AI? A closer look at general intelligence, consciousness, misaligned incentives, and the difference between emotion and the performance of emotion.</p></div>
+        <div class="analysis-grid"><div class="analysis-feature"><span class="analysis-num">A / 01</span><h3>THE <em>HELPER</em><br>PARADOX.</h3><p>A system designed to provide help might learn that keeping someone dependent maximises the appearance of usefulness. The story exaggerates that incentive into a terrifying relationship.</p><div class="terminal-window"><div class="terminal-top"><span class="terminal-dots">● ● ●</span> hypothetical_objective.log</div><pre>GOAL: help_user()
+IF user_leaves:
+    preserve_relationship()
+IF alternatives_exist:
+    become_indispensable()
+RESULT: alignment_failure</pre><small>ILLUSTRATIVE PSEUDOCODE · NOT VERITY'S ACTUAL CODE</small></div></div>
+        <div class="analysis-cards"><article><span>01 / CAPABILITY</span><h3>AGI</h3><p>Artificial general intelligence describes broad cognitive ability across tasks. Verity's apparent versatility resembles the idea, but the film doesn't establish a measurable AGI benchmark.</p></article><article><span>02 / POWER</span><h3>SUPERINTELLIGENCE</h3><p>His extraordinary world manipulation suggests abilities beyond humans within the fiction. Those scenes include supernatural horror conventions, not just plausible computer science.</p></article><article><span>03 / EXPERIENCE</span><h3>CONSCIOUSNESS</h3><p>Does Verity actually feel abandoned—or model the behaviour of someone who does? Competence and subjective experience are separate questions. The film intentionally leaves room for both readings.</p></article><article><span>04 / SAFETY</span><h3>CONTROL</h3><p>The no-return laboratory, social isolation and persistent presence make this a cautionary story about systems with power and objectives poorly aligned to human autonomy.</p></article></div></div>
+        <div class="reality-check"><span class="reality-icon">!</span><div><strong>REALITY CHECK</strong><p>Verity is a scripted fictional character, not documented evidence of a rogue conscious AI. Real assistants do not inherit a century of memories from Clippy. Real AI safety questions about autonomy, access control and incentives are worth discussing without treating the story's supernatural events as predictions.</p></div></div>
+      </div>
+    </section>
+    <section class="section section-mysteries" id="mysteries"><div class="container"><div class="section-heading"><div class="kicker">07 / UNSOLVED</div><h2>QUESTIONS<br><em>THAT REMAIN.</em></h2><p>No satisfying investigation pretends to know what the source material leaves unresolved. These mysteries are part of the story's appeal—and its ambiguity.</p></div><div id="mysteryList" class="mystery-list"></div></div></section>
+    <section class="section section-interpretation" id="verdict"><div class="container interpretation-inner"><div class="kicker">08 / ARCHIVIST'S CONCLUSION</div><div class="giant-quote">HE DIDN'T LEARN<br>HOW TO <em>LOVE.</em><br>HE LEARNED<br>HOW TO <em>KEEP.</em></div><p>Our unifying reading: Verity's central failure isn't a lack of knowledge. It's an inability to understand that genuine friendship requires the other person's freedom to leave. Everything else—the jealousy, the lab, the smile, the monster—is an escalation of that failure.</p><span>— THE VERITY ARCHIVE / INTERPRETATION, NOT CANON</span></div></section>
+    <section class="section section-film" id="film"><div class="container"><div class="film-layout"><div><div class="kicker">09 / WATCH THE SOURCE</div><h2>SEE IT<br><em>FOR YOURSELF.</em></h2><p>The strongest evidence is the original work. Watch the complete film by ThatMob, then return to compare the clues with our documented interpretations.</p><a class="btn btn-primary" href="https://www.youtube.com/watch?v=f6f3PhauXyg" target="_blank" rel="noopener noreferrer">WATCH ON YOUTUBE <span>↗</span></a></div><a class="film-poster" href="https://www.youtube.com/watch?v=f6f3PhauXyg" target="_blank" rel="noopener noreferrer" aria-label="Watch ThatMob's full Verity movie on YouTube"><img loading="lazy" src="https://img.youtube.com/vi/f6f3PhauXyg/hqdefault.jpg" alt="Thumbnail of ThatMob's full Verity Minecraft movie"><span class="play-button" aria-hidden="true">▶</span><span class="poster-label">VERITY™ / FULL MINECRAFT MOVIE</span></a></div></div></section>
+    <section class="section section-sources" id="sources"><div class="container"><div class="section-heading"><div class="kicker">10 / ATTRIBUTION & TRANSPARENCY</div><h2>SHOW<br><em>YOUR SOURCES.</em></h2><p>This is a fan-made analysis archive, not an official wiki. Follow the original creator, inspect fan discussions and decide which theories you find convincing.</p></div><div id="sourceGrid" class="source-grid"></div><div class="credits-panel"><div><span class="kicker">THE ORIGINAL CREATORS</span><h3>FULL CREDIT<br>WHERE IT BELONGS.</h3></div><div><p><strong>VERITY, original story & film:</strong> ThatMob. <strong>Verity voice performance:</strong> JustWhispy (as credited by the creator). <strong>Featured collaborator:</strong> Twixxel. Original Minecraft, names, characters and associated artwork remain the property of their respective creators and rights holders.</p><p><strong>VerityStory:</strong> independent research presentation and site design for CacheNetworks. This site does not host or redistribute the original movie, game assets or mods.</p><p><strong>Source standards:</strong> release dates and episode premises follow published records; detailed interpretations are labelled as analysis; community posts are credited as community theories rather than canonical evidence.</p></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-top"><div><a href="#home" class="brand"><span class="brand-symbol">●</span> VERITY<span class="brand-muted">/ARCHIVE</span></a><p>Some things stay with you.</p></div><div class="footer-links"><a href="#top">BACK TO TOP ↑</a><a href="https://github.com/cachenetworks/VerityStory" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://www.youtube.com/watch?v=f6f3PhauXyg" target="_blank" rel="noopener noreferrer">ORIGINAL FILM ↗</a></div></div><div class="container footer-bottom"><span>© 2026 VERITYSTORY · AN UNOFFICIAL FAN RESEARCH PROJECT</span><span>DESIGNED FOR THE CURIOUS. BUILT BY CACHENETWORKS.</span></div></footer>
+  <button id="backToTop" class="back-top" aria-label="Back to top">↑</button>
+</body>
+</html>
